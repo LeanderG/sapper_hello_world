@@ -6,6 +6,10 @@ import * as sapper from '@sapper/server';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
+// azure insights
+let appInsights = require('applicationinsights');
+appInsights.start();
+
 polka() // You can also use Express
 	.use(
 		compression({ threshold: 0 }),
