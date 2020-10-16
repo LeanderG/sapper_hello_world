@@ -8,7 +8,7 @@ const dev = NODE_ENV === 'development';
 
 // azure insights
 let appInsights = require('applicationinsights');
-appInsights.start();
+appInsights.setup().start();
 
 polka() // You can also use Express
 	.use(
